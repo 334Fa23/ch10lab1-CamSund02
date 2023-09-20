@@ -1,6 +1,6 @@
 /*
-Author: Maria Cruz
-Date: Current Date
+Author: Cameron Sunderman
+Date: 9/19/2023
 File Name: styles.css
 */
 
@@ -25,7 +25,7 @@ img {
 /* Style rules for mobile viewport */
 
 /* Hide tab-desk class */
-.tab-desk {
+.tab-desk, #menu-links {
     display: none;
 }
 
@@ -39,6 +39,9 @@ header {
 header h1 {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
 }
 
 /* Style rules for navigation area */
@@ -46,23 +49,26 @@ nav {
     background-color: #373684;
 }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav li {
-    display: block;
-    font-size: 2em;
-    border-top: 1px solid #e5e9fc;
-}
-
-nav li a {
-    display: block;
+.mobile-nav a {
     color: #fff;
     text-align: center;
-    padding: 0.5em 1em;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+.menu-icon div{
+    height: 50px;
+    width: 50px;
+    background-color: #373684;
 }
 
 /* Style rules for main content */
@@ -236,13 +242,29 @@ footer a {
     .mobile {
         display: none;
     }
+
+    .mobile-nav {
+        display: none;
+    }
     
     /* Tablet Viewport: Style rule for header content */
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
+
     span.tab-desk {
         display: inline;
     }
     
     /* Tablet Viewport: Style rules for nav area */
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
     nav li {
         border-top: none;
         display: inline-block;
@@ -256,6 +278,10 @@ footer a {
     
     nav li a {
         padding: 0.25em 0.5em;
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
     }
     
     .grid {
